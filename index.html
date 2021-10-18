@@ -36,7 +36,24 @@
   </head>
 <body>
 <style type="text/css">body { cursor: url('data:image/x-icon;base64,AAACAAEAICAQAA8AAQDoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAwEAAP/+/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREREREAAAAAAAAAAAAAABIiIiIhAAAAAAAAAAAAAAASIiIiIQAAAAAAAAAAAAABIiIiIiIQAAAAAAAAAAAAASIiIiIiEAAAAAAAAAAAABIiIiIiIiEAAAAAAAAAAAASIiIiIiIhAAAAAAAAAAABIiIiIiIiIQAAAAAAAAAAASEiIiIiIiEAAAAAAAAAABIhIiIiIiIhAAAAAAAAAAEiISIiIiISIQAAAAAAAAABIhEiEiEiEiEAAAAAAAAAAREBIhIhIhIQAAAAAAAAAAAAASISISIRAAAAAAAAAAAAAAEiEiERAAAAAAAAAAAAAAAAERIhAAAAAAAAAAAAAAAAAAASIQAAAAAAAAAAAAAAAAAAEiEAAAAAAAAAAAAAAAAAABIhAAAAAAAAAAAAAAAAAAASIQAAAAAAAAAAAAAAAAAAEiEAAAAAAAAAAAAAAAAAABIhAAAAAAAAAAAAAAAAAAABEAAAAAAAAAD/////////////////////////////////////////////////8AP///AD///wA///4AH//+AB///AAP//wAD//4AA//+AAP//AAD//gAA//4AAP/+IAH//+AD///gD///8D////w////8P////D////w////8P////D////5//w=='), auto; }</style>
-<style>body{background-image:url(https://zphyr00.github.io/bgzphyr.jpg);background-repeat:repeat}.window{max-width:400px;margin:10px 24px;margin-left:auto;margin-right:auto}img{max-width:100%;height:auto}h1{font-size:13px}p{padding:0 0 13px 0}</style>
+<style>body{background-image:url(https://zphyr00.github.io/bgzphyr.jpg);background-repeat:repeat}.window{max-width:400px;//margin:10px 24px;margin-left:auto;margin-right:auto}img{max-width:100%;height:auto}h1{font-size:13px}p{padding:0 0 13px 0}</style>
+<javascript>
+var taba=document.getElementById("tab-A");
+var tabb=document.getElementById("tab-B");
+function attrbt(elmnt) {
+  if(elmnt.getAttribute("aria-selected")!="true"){
+  elmnt.setAttribute("aria-selected","true");
+  }
+  if(elmnt.getAttribute("aria-controls")==="tab-A"){
+  taba.removeAttribute("hidden");
+  tabb.setAttribute("hidden");
+  }
+  elseif(elmnt.getAttribute("aria-controls")==="tab-B"){
+  tabb.removeAttribute("hidden");
+  taba.setAttribute("hidden");
+  }
+}
+</javascript>
 <div class="window">
   <div class="title-bar">
     <div class="title-bar-text"><h1>Ayo bro, I'm Z_phyr ✋</h1></div>
@@ -49,8 +66,8 @@
   <div class="window-body">
 <section class="tabs">
   <menu role="tablist" aria-label="Sample Tabs">
-    <button role="tab" aria-selected="true" aria-controls="tab-A">Well, it's about me</button>
-    <button role="tab" aria-controls="tab-B">And dat's me</button>
+    <button role="tab" aria-selected="true" aria-controls="tab-A" onclick="attrbt(this)">Well, it's about me</button>
+    <button role="tab" aria-controls="tab-B" onclick="attrbt(this)">And dat's me</button>
   </menu>
   <!-- the tab content -->
   <article role="tabpanel" id="tab-A">
