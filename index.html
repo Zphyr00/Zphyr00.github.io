@@ -40,15 +40,18 @@
 <script type="text/javascript">
 var taba=document.getElementById("tab-A");
 var tabb=document.getElementById("tab-B");
-function attrbt(elmnt) {
-  if(elmnt.getAttribute("aria-selected")!="true"){
-  elmnt.setAttribute("aria-selected","true");
-  }
+var ttaba=document.getElementById("ttaba");
+var ttabb=document.getElementById("ttabb");
+function attrbt(elmnt){
   if(elmnt.getAttribute("aria-controls")==="tab-A"){
+  ttabb.removeAttribute("aria-selected");
+  ttaba.setAttribute("aria-selected","true");
   taba.removeAttribute("hidden");
   tabb.setAttribute("hidden");
   }
   else if(elmnt.getAttribute("aria-controls")==="tab-B"){
+  ttaba.removeAttribute("aria-selected");
+  ttabb.setAttribute("aria-selected","true");
   tabb.removeAttribute("hidden");
   taba.setAttribute("hidden");
   }
@@ -66,8 +69,8 @@ function attrbt(elmnt) {
   <div class="window-body">
 <section class="tabs">
   <menu role="tablist" aria-label="Sample Tabs">
-    <button role="tab" aria-selected="true" aria-controls="tab-A" onclick="attrbt(this)">Well, it's about me</button>
-    <button role="tab" aria-controls="tab-B" onclick="attrbt(this)">And dat's me</button>
+    <button role="tab" aria-selected="true" aria-controls="tab-A" id="ttaba" onclick="attrbt(this)">Well, it's about me</button>
+    <button role="tab" aria-controls="tab-B" id="ttabb" onclick="attrbt(this)">And dat's me</button>
   </menu>
   <!-- the tab content -->
   <article role="tabpanel" id="tab-A">
