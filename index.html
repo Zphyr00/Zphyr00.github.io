@@ -47,16 +47,19 @@
     </div>
   </div>
   <div class="window-body">
-  <ul class="tree-view">
-  <summary>Well, it's about me</summary>
-    <ul><li>
+<section class="tabs">
+  <menu role="tablist" aria-label="Sample Tabs">
+    <button role="tab" aria-selected="true" aria-controls="tab-A">Well, it's about me</button>
+    <button role="tab" aria-controls="tab-B">And dat's me</button>
+  </menu>
+  <!-- the tab content -->
+  <article role="tabpanel" id="tab-A">
     <p>So I'm sitting dare thinking, "Shit, what da fuck, I'm so fucking awesome". So, I'm designing, programming, photographing, making music, searching. And dat, like, I'm all for open source and free license. Some peep say dat if ya ask me really well, man, I ca even does some shit for free.</p>
-    </li></ul>
-  <summary>And dat's me</summary>
-    <ul><li>
+</article>
+  <article role="tabpanel" hidden id="tab-B">
     <p><img src="https://zphyr00.github.io/zphyr.jpg" alt="This is Z_phyr"></p>
-    </li></ul>
-  </ul>
+</article>
+</section>
   </div>
 </div>
 <div class="window">
