@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en_US">
+<html lang="en-US">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -23,8 +23,8 @@
 	<link sizes="144x144" rel="apple-touch-icon" href="https://zphyr00.github.io/apple-touch-icon-144x144.png">
 	<link sizes="152x152" rel="apple-touch-icon" href="https://zphyr00.github.io/apple-touch-icon-152x152.png">
 	<link sizes="180x180" rel="apple-touch-icon" href="https://zphyr00.github.io/apple-touch-icon-180x180.png">
-  <link rel="prefetch prerender" href="https://zphyr00.github.io/zphyr.jpg" />
-  <link rel="prefetch prerender" href="https://zphyr00.github.io/bgzphyr.jpg" />
+  <link rel="preload" as="image" href="https://zphyr00.github.io/zphyr.jpg" />
+  <link rel="preload" as="image" href="https://zphyr00.github.io/bgzphyr.jpg" />
   <meta name="theme-color" content="#6d04af">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Z_phyr">
@@ -32,34 +32,21 @@
   <meta property="og:image" content="https://zphyr00.github.io/zphyr.jpg">
   <meta property="og:site_name" content="Z_phyr">
   <meta property="og:locale" content="en_US">
-  <title>Z_phyr</title>
+  <title>Z_phyr's personal page</title>
   <meta name="description" content="Ayo bro, I'm Z_phyr ✋. This is my personal page. So, I'm designing, programming, photographing, making music, searching."/>
   <meta name="robots" content="all" />
   <link rel="canonical" href="https://zphyr00.github.io/" />
-  <link rel="stylesheet" href="https://unpkg.com/xp.css" />
+  <link rel="preload" href="https://unpkg.com/xp.css@0.3.0/dist/XP.css" as="style" />
+  <link rel="preload" href="https://unpkg.com/xp.css@0.3.0/dist/ms_sans_serif.woff" as="font" />
+  <link rel="preload" href="https://unpkg.com/xp.css@0.3.0/dist/ms_sans_serif.woff2" as="font" />
+  <link rel="preload" href="https://unpkg.com/xp.css@0.3.0/dist/ms_sans_serif_bold.woff" as="font" />
+  <link rel="preload" href="https://unpkg.com/xp.css@0.3.0/dist/ms_sans_serif_bold.woff2" as="font" />
+  <link rel="preload" href="https://unpkg.com/xp.css@0.3.0/dist/PerfectDOSVGA437Win.woff" as="font" />
+  <link rel="preload" href="https://unpkg.com/xp.css@0.3.0/dist/PerfectDOSVGA437Win.woff2" as="font" />
+  <style>*{font-size:16px!important}body{min-height:100vh;background-image:url(https://zphyr00.github.io/bgzphyr.jpg);background-repeat:repeat;cursor:url(data:image/x-icon;base64,AAACAAEAICAQAA8AAQDoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAwEAAP/+/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREREREAAAAAAAAAAAAAABIiIiIhAAAAAAAAAAAAAAASIiIiIQAAAAAAAAAAAAABIiIiIiIQAAAAAAAAAAAAASIiIiIiEAAAAAAAAAAAABIiIiIiIiEAAAAAAAAAAAASIiIiIiIhAAAAAAAAAAABIiIiIiIiIQAAAAAAAAAAASEiIiIiIiEAAAAAAAAAABIhIiIiIiIhAAAAAAAAAAEiISIiIiISIQAAAAAAAAABIhEiEiEiEiEAAAAAAAAAAREBIhIhIhIQAAAAAAAAAAAAASISISIRAAAAAAAAAAAAAAEiEiERAAAAAAAAAAAAAAAAERIhAAAAAAAAAAAAAAAAAAASIQAAAAAAAAAAAAAAAAAAEiEAAAAAAAAAAAAAAAAAABIhAAAAAAAAAAAAAAAAAAASIQAAAAAAAAAAAAAAAAAAEiEAAAAAAAAAAAAAAAAAABIhAAAAAAAAAAAAAAAAAAABEAAAAAAAAAD/////////////////////////////////////////////////8AP///AD///wA///4AH//+AB///AAP//wAD//4AA//+AAP//AAD//gAA//4AAP/+IAH//+AD///gD///8D////w////8P////D////w////8P////D////5//w==),auto}.window{max-width:400px;margin:10px 24px;margin-left:auto;margin-right:auto}img{max-width:100%;height:auto}</style>
   </head>
 <body>
-<style>*{font-size:16px!important}html,body{scrollbar-face-color:#6d04af}::webkit-scrollbar-button,::-webkit-scrollbar-thumb{background:#6d04af}body{min-height:100vh;background-image:url(https://zphyr00.github.io/bgzphyr.jpg);background-repeat:repeat;cursor:url('data:image/x-icon;base64,AAACAAEAICAQAA8AAQDoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAwEAAP/+/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEREREREAAAAAAAAAAAAAABIiIiIhAAAAAAAAAAAAAAASIiIiIQAAAAAAAAAAAAABIiIiIiIQAAAAAAAAAAAAASIiIiIiEAAAAAAAAAAAABIiIiIiIiEAAAAAAAAAAAASIiIiIiIhAAAAAAAAAAABIiIiIiIiIQAAAAAAAAAAASEiIiIiIiEAAAAAAAAAABIhIiIiIiIhAAAAAAAAAAEiISIiIiISIQAAAAAAAAABIhEiEiEiEiEAAAAAAAAAAREBIhIhIhIQAAAAAAAAAAAAASISISIRAAAAAAAAAAAAAAEiEiERAAAAAAAAAAAAAAAAERIhAAAAAAAAAAAAAAAAAAASIQAAAAAAAAAAAAAAAAAAEiEAAAAAAAAAAAAAAAAAABIhAAAAAAAAAAAAAAAAAAASIQAAAAAAAAAAAAAAAAAAEiEAAAAAAAAAAAAAAAAAABIhAAAAAAAAAAAAAAAAAAABEAAAAAAAAAD/////////////////////////////////////////////////8AP///AD///wA///4AH//+AB///AAP//wAD//4AA//+AAP//AAD//gAA//4AAP/+IAH//+AD///gD///8D////w////8P////D////w////8P////D////5//w=='),auto}.window{max-width:400px;margin:10px 24px;margin-left:auto;margin-right:auto}img{max-width:100%;height:auto}</style>
-<script type="text/javascript">
-function attrbt(elmnt){
-var taba=document.getElementById("tab-A");
-var tabb=document.getElementById("tab-B");
-var ttaba=document.getElementById("ttaba");
-var ttabb=document.getElementById("ttabb");
-  if(elmnt.getAttribute("aria-controls")==="tab-A"){
-  ttabb.removeAttribute("aria-selected");
-  ttaba.setAttribute("aria-selected","true");
-  taba.removeAttribute("hidden");
-  tabb.setAttribute("hidden","");
-  }
-  else if(elmnt.getAttribute("aria-controls")==="tab-B"){
-  ttaba.removeAttribute("aria-selected");
-  ttabb.setAttribute("aria-selected","true");
-  tabb.removeAttribute("hidden");
-  taba.setAttribute("hidden","");
-  }
-}
-</script>
+<script>function attrbt(elmnt){var taba=document.getElementById("tab-A");var tabb=document.getElementById("tab-B");var ttaba=document.getElementById("ttaba");var ttabb=document.getElementById("ttabb");if(elmnt.getAttribute("aria-controls")==="tab-A"){ttabb.removeAttribute("aria-selected");ttaba.setAttribute("aria-selected","true");taba.removeAttribute("hidden");tabb.setAttribute("hidden","")}else if(elmnt.getAttribute("aria-controls")==="tab-B"){ttaba.removeAttribute("aria-selected");ttabb.setAttribute("aria-selected","true");tabb.removeAttribute("hidden");taba.setAttribute("hidden","")}}</script>
 <div class="window">
   <div class="title-bar">
     <div class="title-bar-text"><h1>Ayo bro, I'm Z_phyr ✋</h1></div>
@@ -75,12 +62,11 @@ var ttabb=document.getElementById("ttabb");
     <button role="tab" aria-selected="true" aria-controls="tab-A" id="ttaba" onclick="attrbt(this)">Well, it's about me</button>
     <button role="tab" aria-controls="tab-B" id="ttabb" onclick="attrbt(this)">And dat's me</button>
   </menu>
-  <!-- the tab content -->
   <article role="tabpanel" id="tab-A">
     <p>And I sat there thinking, "Shit, what da fuck, I'm so fucking awesome". So, I'm designing, programming, photographing, making music, searching. And dat, like, I'm all for open source and free license. Some peep say dat if ya ask me really well, man, I ca even does some shit for free.</p>
 </article>
   <article role="tabpanel" hidden id="tab-B">
-    <p><img src="https://zphyr00.github.io/zphyr.jpg" alt="This is Z_phyr"></p>
+    <p><img src="https://zphyr00.github.io/zphyr.jpg" loading="lazy" alt="This is Z_phyr"></p>
 </article>
 </section>
   </div>
