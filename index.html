@@ -104,5 +104,25 @@
     <p><a href="https://tattoonhamon.ru">Tattoonhamon</a></p>
   </div>
 </div>
+<div class="window">
+  <div class="title-bar">
+    <div class="title-bar-text">Settings</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <p><form name="lang">
+      <select>
+        <option>Russian</option>
+        <option>English</option>
+      </select>
+      <button type="submit">Select</button>
+    </form>
+    <script>document.addEventListener('DOMContentLoaded',function(){var form=document.forms.lang;form.addEventListener('submit',function(){var url='https://zphyr00.github.io' + ['/ru/','/'][form.selectedIndex];form.action=url;})});</script></p>
+  </div>
+</div>
 </body>
 </html>
