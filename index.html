@@ -124,13 +124,12 @@
     } else {
       localStorage.setItem("lang", "en");
     }
-  }
 let isRu = document.body.classList.contains("ru");
 var lang = localStorage.getItem("lang");
 if (lang == "ru" && !isRu) {
    document.location.href = 'https://zphyr00.github.io/ru/';
 } else if (lang == "en" && isRu) {
    document.location.href = 'https://zphyr00.github.io/';
-}</script>
+}}</script>
 </body>
 </html>
