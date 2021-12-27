@@ -88,26 +88,6 @@
     </section>
   </main>
   <script>let processScroll=()=>{let e=document.documentElement,o=document.body,l=(e.scrollTop||o.scrollTop)/((e.scrollHeight||o.scrollHeight)-window.innerHeight)*100+"%";document.getElementById("progress-bar").style.setProperty("--scrollAmount",l)};document.addEventListener("scroll",processScroll);function addZero(e){return e<10&&(e="0"+e),e}function getCurrentTime(){var e;return(e=new Date(Date.now())).getUTCHours()+7+"<span class=timeseparator>:</span>"+addZero(e.getUTCMinutes())}function setTimer(){time.innerHTML=getCurrentTime()}setInterval(setTimer,1e3);function ToTop(){window.pageYOffset>0&&(window.scrollBy(0,-10),setTimeout(ToTop,0))}var goTop=document.querySelector(".totop");goTop.addEventListener("click",ToTop);
-var h1 = document.getElementsByTagName("h1");
-
-function followCursor(e) {
-    var x = e.clientX;
-    var y = e.clientY;
-    var w = window.innerWidth / 2
-|| document.documentElement.clientWidth / 2 || document.body.clientWidth / 2;
-    var h = window.innerHeight / 2
-|| document.documentElement.clientHeight / 2 || document.body.clientHeight / 2; 
-    var midWidth = w / 2;
-    var midHeight = h / 2;
-    var xPos = x - w;
-    var yPos = y - h;
-    var xVal = (xPos / midWidth) * 25;
-    var yVal= -(yPos / midHeight) * 25;
-    h1.style.transform = `perspective(${w}px) rotateY(${xVal}deg) rotateX(${yVal}deg)`;
-}
-
-document.addEventListener("mousemove", (e) => {
-  followCursor(e)
-  }, false);</script>
+let maxAngle=10,refs={transformedDiv:document.querySelector("h1")};refs.transformedDiv.addEventListener("transitionend",transitionComplete,!1);let lastRender={},isTransitionComplete=!0;function onResize(){page.width=window.innerWidth,page.height=window.innerHeight}window.addEventListener("resize",onResize,!1);let page={};function onMouseMove(e){mousePosition.x=e.pageX,mousePosition.y=e.pageY,setTrackingActive()}function updatePerspective(){if(isTransitionComplete&&(lastRender.mouseX!==mousePosition.x||lastRender.mouseY!==mousePosition.y||lastRender.pageWidth!==page.width||lastRender.pageHeight!==page.height)){let e=0,t=0;-1!==mousePosition.x&&(e=-(page.width/2-mousePosition.x)/(page.width/2)*maxAngle,t=(page.height/2-mousePosition.y)/(page.height/2)*maxAngle),-1===lastRender.mouseX&&setTrackingStarting(),lastRender.mouseX=mousePosition.x,lastRender.mouseY=mousePosition.y,lastRender.pageWidth=page.width,lastRender.pageHeight=page.height,refs.transformedDiv.style.transform=`perspective( 2000px ) rotateY(${e}deg) rotateX(${t}deg)`}window.requestAnimationFrame(updatePerspective)}page.width=window.innerWidth,page.height=window.innerHeight,document.addEventListener("mousemove",onMouseMove);let mousePosition={};function clearMousePosition(){setTrackingEnding(),mousePosition.x=-1,mousePosition.y=-1}clearMousePosition(),window.requestAnimationFrame(updatePerspective);let resetTimeout=initResetTimeout();function initResetTimeout(){return window.setTimeout(clearMousePosition,3e3)}function resetResetTimeout(){window.clearTimeout(resetTimeout),resetTimeout=initResetTimeout()}function transitionComplete(){isTransitionComplete=!0,refs.transformedDiv.classList.remove("smooth","fast")}function setTrackingStarting(){isTransitionComplete=!1,refs.transformedDiv.classList.add("fast")}function setTrackingActive(){refs.transformedDiv.classList.remove("smooth"),resetResetTimeout()}function setTrackingEnding(){refs.transformedDiv.classList.add("smooth"),refs.transformedDiv.classList.remove("fast")}</script>
 </body>
 </html>
