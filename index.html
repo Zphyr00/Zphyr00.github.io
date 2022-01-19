@@ -47,69 +47,62 @@
   <link rel="alternate" hreflang="en" href="https://zphyr00.github.io/">
   <link rel="alternate" hreflang="ru" href="https://zphyr00.github.io/ru/">
   <style>*{line-height:1.3;padding:0;scrollbar-color:#58585c #ebebf5;scrollbar-width:thin}::-webkit-scrollbar{width:12px}::-webkit-scrollbar-track{background-color:#ebebf5}::-webkit-scrollbar-thumb{background-color:#58585c}@media (prefers-reduced-motion:reduce){*{animation:none!important}}@font-face{font-family:OldStandard-Regular;src:url('https://zphyr00.github.io/OldStandard-Regular.woff2') format('woff2'),url('https://zphyr00.github.io/OldStandard-Regular.woff') format('woff'),url('https://zphyr00.github.io/OldStandard-Regular.ttf') format('truetype');font-display:swap}@font-face{font-family:PlayfairDisplay-Bold;src:url('https://zphyr00.github.io/PlayfairDisplay-Bold.woff2') format('woff2'),url('https://zphyr00.github.io/PlayfairDisplay-Bold.woff') format('woff'),url('https://zphyr00.github.io/PlayfairDisplay-Bold.ttf') format('truetype');font-display:swap}body{box-sizing:border-box;font-family:'OldStandard-Regular',sans-serif;font-size:21px;font-weight:500;color:#58585c;background:#ebebf5;background-repeat:repeat;background-image:url("https://zphyr00.github.io/bg.jpg");background-blend-mode:overlay;text-decoration:unset}img{display:inline;width:100%;max-width:549;margin:auto;box-shadow:0 5px 10px rgba(88,88,92,.6),0 -2px 0 rgba(235,235,245,1);transition:all .3s cubic-bezier(.25,.8,.25,1)}img:hover{box-shadow:0 10px 20px rgba(88,88,92,.6),0 -4px 0 rgba(235,235,245,1)}.edih{display:none}main,section{display:block}a{background:linear-gradient(to bottom,#5557ab 0%,#5557ab 100%);background-position:0 100%;background-repeat:repeat-x;background-size:3px 3px;color:#5557ab;text-decoration:none}a:hover{background-image:url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%235557ab' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");background-position:0 100%;background-size:auto 6px;background-repeat:repeat-x;text-decoration:none}b{font-weight:700}h1,h2{font-family:'PlayfairDisplay-Bold',sans-serif;text-shadow:2px 2px rgba(85,87,171,.3)}h1{font-size:55px;font-weight:900;margin:auto}h2{font-size:34px;margin-top:25px;overflow:hidden;word-wrap:break-word}ul{list-style:none}main{box-sizing:border-box;max-width:960px;margin:30px auto;overflow:hidden}section{border:solid #58585c;border-width:0 2px;overflow:hidden;padding:40px}.line{position:absolute;left:0;width:100%;border-bottom:2px solid #58585c}p,ul{margin-top:25px;overflow:hidden}ul li{margin-top:10px}@supports (-webkit-text-stroke:2px #5557ab){h1 span a,h2{color:transparent;-webkit-text-stroke:2px #5557ab}}p:first-child{margin-top:0}@media only screen and (max-width:480px){main{padding:15px 0}section{padding:0 20px}}#progress-bar{--scrollAmount:0%;margin:0;background:#58585C;width:var(--scrollAmount);height:2px;border-radius:10px;position:fixed;top:0;left:0;z-index:999}.timeseparator{animation:timeseparator 1s ease}@keyframes timeseparator{from{opacity:1}50%{opacity:0}to{opacity:1}}.flex{display:flex;flex-direction:row;justify-content:space-between;border:0}
-  .b-game-card {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width:549px;
-  padding-bottom: 150%;
-  perspective: 1000px;
-}
-.b-game-card__cover {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
+.cards .card {
+  margin: 20px;
+  width: 180px;
+  height: 270px;
   overflow: hidden;
-  background: url('https://zphyr00.github.io/zphyr.jpg') no-repeat center center;
-  background-size: cover;
-  perspective-origin: 50% 50%;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.8);
+  transform-origin: center top;
   transform-style: preserve-3d;
-  transform-origin: top center;
-  will-change: transform;
-  transform: skewX(0.001deg);
-  transition: transform 0.35s ease-in-out;
+  transform: translateZ(0);
+  transition: 0.3s;
 }
-.b-game-card__cover::after {
-  display: block;
-  content: "";
-  position: absolute;
-  z-index: 100;
-  top: 0;
-  left: 0;
+.cards .card img {
   width: 100%;
-  height: 120%;
-  background: linear-gradient(226deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 35%, rgba(255, 255, 255, 0.2) 42%, rgba(255, 255, 255, 0) 60%);
-  transform: translateY(-20%);
-  will-change: transform;
-  transition: transform 0.65s cubic-bezier(0.18, 0.9, 0.58, 1);
+  min-height: 100%;
 }
-.b-game-card:hover .b-game-card__cover {
-  transform: rotateX(7deg) translateY(-6px);
+.cards .card figcaption {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  background: none;
+  color: #fff;
+  transform: translateY(100%);
+  transition: 0.3s;
 }
-.b-game-card:hover .b-game-card__cover::after {
-  transform: translateY(0%);
+.cards .card:after {
+  content: '';
+  z-index: 10;
+  width: 200%;
+  height: 100%;
+  top: -90%;
+  left: -20px;
+  opacity: 0.1;
+  transform: rotate(45deg);
+  background: linear-gradient(to top, transparent, #fff 15%, rgba(255,255,255,0.5));
+  transition: 0.3s;
 }
-.b-game-card::before {
-  display: block;
-  content: "";
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  width: 90%;
-  height: 90%;
-  background: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 6px 12px 12px rgba(0, 0, 0, 0.4);
-  will-change: opacity;
-  transform-origin: top center;
-  transform: skewX(0.001deg);
-  transition: transform 0.35s ease-in-out, opacity 0.5s ease-in-out;
+.cards .card:hover,
+.cards .card:focus,
+.cards .card:active {
+  box-shadow: 0 8px 16px 3px rgba(0,0,0,0.6);
+  transform: translateY(-3px) scale(1.05) rotateX(15deg);
 }
-.b-game-card:hover::before {
-  opacity: 0.6;
-  transform: rotateX(7deg) translateY(-6px) scale(1.05);
+.cards .card:hover figcaption,
+.cards .card:focus figcaption,
+.cards .card:active figcaption {
+  transform: none;
+}
+.cards .card:hover:after,
+.cards .card:focus:after,
+.cards .card:active:after {
+  transform: rotate(25deg);
+  top: -40%;
+  opacity: 0.15;
 }</style>
   <meta name="google" content="notranslate"/></head>
 <body>
@@ -130,6 +123,11 @@
       <picture><source srcset="https://zphyr00.github.io/zphyr.webp" type="image/webp"><img src="https://zphyr00.github.io/zphyr.jpg" alt="This is Z_phyr"></picture>
       <div class="b-game-card">
       <div class="b-game-card__cover"></div>
+      </div>
+      <div class="cards">
+		  <figure class="card">
+			  <picture><source srcset="https://zphyr00.github.io/zphyr.webp" type="image/webp"><img src="https://zphyr00.github.io/zphyr.jpg" alt="This is Z_phyr"></picture>
+		  </figure>
       </div>
     </section>
     <section>
