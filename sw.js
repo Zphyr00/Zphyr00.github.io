@@ -1,5 +1,5 @@
 const CACHE_NAME = "offline";
-const OFFLINE_URL = "https://zphyr00.github.io/offline.html";
+const OFFLINE_URL = "https://zphyr00.github.io";
 self.addEventListener("install", (event) => {
   event.waitUntil(
     (async () => {
