@@ -7,7 +7,7 @@
       document.querySelector(function() {
         document.querySelector('#encrypt').click(function() {
           var encrypt = new JSEncrypt();
-          encrypt.setPublicKey("-----BEGIN PUBLIC KEY-----
+          var key = String("-----BEGIN PUBLIC KEY-----
 MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEA7KuLFSuJiAx3bn2oCdJ6
 SBNr8ADcetRteHYug3tUXfYSXbagu+ROz6uEGiK7GjxRgBUTQ/oWmw7bWt993dNq
 bipd0oXFtmd/lP5ja+iWbWeQ5j41ugs0JsPdhMD68apyR/IitNNJt3r1BscZ8dyK
@@ -21,6 +21,7 @@ gTYWoQSSCNDldZbi9Dr5aOJoYnF/Y42zz9UqBUU8XtFouEc3fzQxqnsx4ZhW5LIb
 ZcyqaYha2c6+k4wmMc8Fjr0Y7f8W2h9ZgJp4wNBNofrL087qIxGJTNg4dUY+Uun1
 FmakKX6RwyP3zNrh98MuhhsCAwEAAQ==
 -----END PUBLIC KEY-----");
+          encrypt.setPublicKey(key);
           var encrypted = encrypt.encrypt(document.querySelector('#input').value);
           document.write(encrypted);
         });
