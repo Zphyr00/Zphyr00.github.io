@@ -1,3 +1,6 @@
 Host: zphyr00.github.io
 User-agent: *
 Disallow: /robot.html
+Disallow: /*?*
+Disallow: /*%
+Sitemap: https://zphyr00.github.io/sitemap.xml
