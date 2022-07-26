@@ -1,0 +1,20 @@
+{
+    "name": "Zphyr",
+    "short_name": "Zphyr",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#0099ff",
+    "background_color": "#0099ff",
+    "start_url": "https://zphyr00.github.io",
+    "display": "standalone"
+}
