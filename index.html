@@ -81,7 +81,11 @@
     <footer class="section footer" role="contentinfo">
       <a href="index.html#top" role="link" tabindex="0" data-scroll>
         <span class="sr">Z_phyr</span>
-        <img class="icn icn--zphyr" src="/ogimg.jpg" loading="lazy">
+	<picture>
+	  <source type="image/webp" srcset="/ogimg.webp">
+	  <source type="image/jpeg" srcset="/ogimg.jpg">
+	  <img class="icn icn--zphyr" src="/ogimg.jpg" loading="lazy">
+	</picture>
       </a>
       <nav id="nav" role="navigation" class="nav" aria-hidden="true">
         <ul class="menu" role="menubar" aria-orientation="vertical">
