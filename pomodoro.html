@@ -32,139 +32,157 @@
   <link rel="preconnect" href="index.html">
 </head>
 <body>
-<div class="pomodoro">
-  <div class="row">
-    <div class="col-md-6">
-      <div class="row"><p>session length<p></div>
-      <div class="row counter">
-        <div class="col-md-4">
-          <button class="btn btn-default" id="sessDec">-</button>        
-        </div>
-        <div class="col-md-2">
-          <div id="session"></div>
-        </div>
-        <div class="col-md-4">
-          <button class="btn btn-default" id="sessInc">+</button>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="row"><p>break length<p></div>
-      <div class="row counter">
-        <div class="col-md-4">
-          <button class="btn btn-default" id="breakDec">-</button>
-        </div>
-        <div class="col-md-2">
-          <div id="break"></div>
-        </div>
-        <div class="col-md-4">
-          <button class="btn btn-default" id="breakInc">+</button>        
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="clock" class="row">
-    <div class="timer"><div class="middle"></div></div>
-  </div>
-  <div class="row" id="statRow">
-    <div id="stats"></div>
-  </div>
-  <div class="container">
-    <div class="row" id="btns">
-      <button class="btn btn-default btn-lg" id="start">start</button>
-      <button class="btn btn-default btn-lg" id="stop">stop</button>
-      <button class="btn btn-default btn-lg" id="clear">clear</button>
-    </div>
-  </div>
+<div id="timer_display">
+    <div id="timer_display_duration">00:00</div>
+    <div id="timer_display_name">Работа</div>
 </div>
-<script>$(document).ready(function(){
-  var countS = 25;
-  $("#session").html(countS);
-  var countB = 5;
-  $("#break").html(countB);
-  var pos = "pomodoro";
-  var countLama;
-  var posLama;
-  var count;
-  $("#stats").html(pos);
-  var clock = $(".timer").FlipClock(0, {
-    countdown: true,
-    clockFace: 'MinuteCounter',
-    autoStart: false,
-    callbacks: {
-      interval: function(){
-        if (clock.getTime() == 0){
-          if (pos == "session"){
-            clock.setTime(countB*60);
-            clock.start();
-            pos = "break";
-            $("#stats").html(pos);
-          } else if (pos == "break"){
-            clock.setTime(countS*60);
-            clock.start();
-            pos = "session";
-            $("#stats").html(pos);
-          }
-        }        
-      }
+<div id="timer_button_container">
+    <button type="button" id="timer_button">Старт</button>
+</div>
+<script>class PomodoroTimerComponent
+{
+    static get STATE_STOPPED() {
+        return 1;
     }
-  })  
-  //SESSION
-  $("#sessInc").on("click", function(){
-    if ($("#session").html() > 0){
-      countS = parseInt($("#session").html());
-      countS+=1;
-      $("#session").html(countS);
-      //clock.setTime(countS*60);
+    static get STATE_RUNNING() {
+        return 2;
     }
-  });
-  $("#sessDec").on("click", function(){
-    if ($("#session").html() > 1){
-      countS = parseInt($("#session").html());
-      countS-=1;
-      $("#session").html(countS);
-      //clock.setTime(countS*60);
+    /**
+     * PomodoroTimer component.
+     * @param {Object} options Options: defaultTimerQueue.
+     */
+    constructor(options={})
+    {
+        this.timerNameElem = document.getElementById('timer_display_name');
+        this.timerDurationElem = document.getElementById('timer_display_duration');
+        this.timerButtonElem = document.getElementById('timer_button');
+        this.timerQueue = new TimerQueue();
+        this.defaultTimerQueue = options.defaultTimerQueue || [
+            new Timer("Работа", 25*60),
+            new Timer("Отдых", 5*60)
+        ];
+        this.currentTimer = null; // no timer until user starts timer queue
+        this.currentTimerStart = 0;
+        this.currentTimerSecondsLeft = 0;
+        this.state = PomodoroTimerComponent.STATE_STOPPED;
+        this.initEventHandlers();
     }
-  });
-  //BREAK
-  $("#breakInc").on("click", function(){
-    if ($("#break").html() > 0){
-      countB = parseInt($("#break").html());
-      countB+=1;
-      $("#break").html(countB);
-    }    
-  });
-  $("#breakDec").on("click", function(){
-    if ($("#break").html() > 1){
-      countB = parseInt($("#break").html());
-      countB-=1;
-      $("#break").html(countB);
+    /**
+     * Create DOM event handlers.
+     */
+    initEventHandlers()
+    {
+        document.addEventListener('click', function(e){
+            if (e.target.id === this.timerButtonElem.id) {
+                if (this.state === PomodoroTimerComponent.STATE_STOPPED) {
+                    this.event_startTimer.call(this);
+                } else if (this.state === PomodoroTimerComponent.STATE_RUNNING) {
+                    this.event_stopTimer.call(this);
+                }
+            }
+        }.bind(this), false);
     }
-  });  
-  $("#start").on("click", function(){
-    if (count != countS || clock.getTime()==0){
-      clock.setTime(countS*60);
-      pos="session";
-      $("#stats").html(pos);
-    } else {
-      pos = posLama;
-      $("#stats").html(pos);
+    /**
+     * Update DOM when state changes occur.
+     */
+    render()
+    {
+        if (this.state === PomodoroTimerComponent.STATE_STOPPED) {
+            this.timerButtonElem.textContent = "Старт";
+            if (this.timerQueue.isEmpty()) {
+                this.timerNameElem.textContent = "Готово";
+                this.timerDurationElem.textContent = this.formatDuration(0);
+            }
+        } else if (this.state === PomodoroTimerComponent.STATE_RUNNING) {
+            this.timerButtonElem.textContent = "Стоп";
+            if (this.currentTimer) {
+                this.timerNameElem.textContent = this.currentTimer.name;
+            }
+            if (this.currentTimerSecondsLeft >= 0) {
+                this.timerDurationElem.textContent = this.formatDuration(this.currentTimerSecondsLeft);
+            }
+        }
     }
-    count = countS;    
-    clock.start();    
-  });
-  $("#stop").on("click", function(){
-    clock.stop();
-    countLama = clock.getTime();
-    posLama = $("#stats").html();
-  });
-  $("#clear").on("click", function(){
-    clock.stop();
-    pos = "pomodoro";
-    $("#stats").html(pos);
-    clock.setTime(0);
-  });
-});</script>
+    /**
+     * Returns a duration in seconds as minutes and seconds.
+     * @param {Number} duration_in_seconds Duration in seconds.
+     * @returns {String} Duration formatted as "MM:SS"
+     */
+    formatDuration(duration_in_seconds)
+    {
+        let minutes = (duration_in_seconds / 60) | 0;
+        let seconds = (duration_in_seconds % 60) | 0;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        return minutes + ":" + seconds;
+    }
+    /**
+     * Re-create the timer queue using the default timer queue option.
+     */
+    createTimerQueue()
+    {
+        this.timerQueue.clear();
+        Array.prototype.map.call(this.defaultTimerQueue, function(timer){
+            this.timerQueue.push(timer);
+        }.bind(this));
+    }
+    /**
+     * Fetches the next timer in the queue and sets it as the current timer
+     * to be rendered on screen.
+     */
+    getNextTimerFromQueue()
+    {
+        this.currentTimer = this.timerQueue.pop();
+        if (this.currentTimer) {
+            this.currentTimerStart = Date.now();
+            this.currentTimerSecondsLeft = this.currentTimer.duration;
+        }
+        return this.currentTimer;
+    }
+    /**
+     * User action: Start timer.
+     */
+    event_startTimer()
+    {
+        function timerUpdate() {
+            this.currentTimerSecondsLeft = (this.currentTimer.duration - (((Date.now() - this.currentTimerStart) / 1000) | 0));
+            // Update UI
+            requestAnimationFrame(function(){
+                this.render();
+            }.bind(this));
+
+            // If it reaches the end, look for next timer
+            if (this.currentTimerSecondsLeft <= 0) {
+                if (!this.getNextTimerFromQueue()) {
+                    // We are at the end of the queue
+                    this.event_stopTimer.call(this);
+                }
+            }
+        }
+        this.createTimerQueue();
+        this.getNextTimerFromQueue();
+        this.state = PomodoroTimerComponent.STATE_RUNNING;
+        // The following will call render() at 1s intervals
+        timerUpdate.call(this);
+        this.timerInterval = setInterval(timerUpdate.bind(this), 1000);
+    }
+    /**
+     * User action: Stop timer.
+     * Or, when timer queue is empty.
+     */
+    event_stopTimer()
+    {
+        if (this.timerInterval) {
+            clearInterval(this.timerInterval);
+        }
+        this.currentTimer = null;
+        this.currentTimerSecondsLeft = 0;
+        this.state = PomodoroTimerComponent.STATE_STOPPED;
+        requestAnimationFrame(function(){
+            this.render();
+        }.bind(this));
+    }
+}</script>
   <script defer src='https://zphyr00.github.io/main.bundle.js'></script>
 </body>
 </html>
