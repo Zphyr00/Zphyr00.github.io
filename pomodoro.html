@@ -21,81 +21,7 @@
   <meta name="msapplication-TileColor" content="#0099ff">
   <meta name="theme-color" content="#0099ff">
   <script>!function(b){"use strict";var a=function(i,d,k){function j(a){if(c.body)return a();setTimeout(function(){j(a)})}function e(){a.addEventListener&&a.removeEventListener("load",e),a.media=k||"all"}var f,c=b.document,a=c.createElement("link");if(d)f=d;else{var g=(c.body||c.getElementsByTagName("head")[0]).childNodes;f=g[g.length-1]}var l=c.styleSheets;a.rel="stylesheet",a.href=i,a.media="only x",j(function(){f.parentNode.insertBefore(a,d?f:f.nextSibling)});var h=function(c){for(var d=a.href,b=l.length;b--;)if(l[b].href===d)return c();setTimeout(function(){h(c)})};return a.addEventListener&&a.addEventListener("load",e),a.onloadcssdefined=h,h(e),a};"undefined"!=typeof exports?exports.loadCSS=a:b.loadCSS=a}("undefined"!=typeof global?global:this),function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var d=a.document.getElementsByTagName("link"),c=0;c<d.length;c++){var b=d[c];"preload"===b.rel&&"style"===b.getAttribute("as")&&(a.loadCSS(b.href,b,b.getAttribute("media")),b.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this)</script>
-  <style>body,html{-webkit-font-smoothing:antialiased}html{-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-ms-overflow-style:scrollbar;-webkit-tap-highlight-color:transparent;text-rendering:optimizeLegibility}*,::after,::before{-webkit-box-sizing:border-box;box-sizing:border-box}body{margin:0;overflow-x:hidden;font:caption;font-size:calc(1rem + .25vw);font-weight:400;line-height:1.5;color:#333;background-color:#eee}.ios body{font-family:"-apple-system",HelveticaNeue,sans-serif}[role=button],a,area,button,input:not([type=range]) label,select,summary,textarea{-ms-touch-action:manipulation;touch-action:manipulation}a{color:#09f;-webkit-text-decoration-skip:ink;text-decoration-skip:ink;background-color:transparent;-webkit-text-decoration-skip:objects;-webkit-transition:color .3s;transition:color .3s}h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.33;color:inherit;margin-bottom:.5rem}@-webkit-keyframes fade-in{100%{opacity:1}}@keyframes fade-in{100%{opacity:1}}.skip{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;-webkit-clip-path:inset(50%);clip-path:inset(50%);border:0}.section{display:grid;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;min-height:100vh;padding:35vw 1.25rem}.section--label{margin:0 0 3.25rem;font-size:2.25rem;font-weight:700}.section--title{margin:5rem 0 1.5rem;font-size:.875rem;color:#333;line-height:1.2;text-transform:uppercase}.section--title:first-child{margin-top:0}.section--title .section--label{letter-spacing:.125rem}.section--intro{color:#eee;background-color:#09f}.section--intro .section--label{display:block;grid-column:2;margin:0 0 1.675rem;font-size:.75rem;font-weight:700;color:#333;text-transform:uppercase}.section--intro .section--title{padding:0 2.5vw;margin:0;font-size:7vw;font-weight:700;color:#eee;line-height:1.1;text-transform:none;-webkit-transition:opacity .9s ease-in-out,-webkit-transform .9s ease-in-out;transition:opacity .9s ease-in-out,transform .9s ease-in-out,-webkit-transform .9s ease-in-out}.section--intro .scroll-link{display:inline-block;color:#eee;text-decoration:none;border-bottom:1px solid #eee}.section--intro .scroll-link--name{margin-bottom:.75rem}@media (min-width:48rem){.section{padding:27.5vw 20vw}}@media (min-width:75rem){.section{grid-template-columns:repeat(2,1fr);grid-template-rows:1fr;padding:20vh 7.5vh}}@media (min-width:90rem){.section{padding:20vh 10vh},.section--intro .section--title{font-size:3.75vw}}.page{opacity:0}header {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: 0 auto;
-  color: #fff;
-  text-transform: uppercase;
-  padding: 20px;
-}
-header .session {
-  font-size: 0.8em;
-  display: flex;
-}
-header .session .breakCtrl, header .session .sessionCtrl {
-  display: inline;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-header .session .minus, header .session .plus {
-  background-color: #333333;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-size: 2em;
-  outline: none;
-}
-header .session .time {
-  font-size: 2.5em;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-section {
-  background-color: #333333;
-  height: 100%;
-  color: #fff;
-}
-section .title {
-  text-align: center;
-  line-height: 180px;
-  font-size: 0.8em;
-}
-section .timer {
-  margin: 0 auto;
-  text-align: center;
-  width: 300px;
-  height: 300px;
-  font-size: 4em;
-  border: 2px solid #99CC00;
-  border-radius: 50%;
-  cursor: pointer;
-  position: relative;
-  z-index: 20;
-  overflow: hidden;
-}
-section .timer:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 50%;
-  z-index: 2;
-  border: 4px solid #333333;
-}
-section .fill {
-  content: "";
-  position: absolute;
-  background: #99CC00;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: -1;
-}</style>
+  <style>body,html{-webkit-font-smoothing:antialiased}html{-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-ms-overflow-style:scrollbar;-webkit-tap-highlight-color:transparent;text-rendering:optimizeLegibility}*,::after,::before{-webkit-box-sizing:border-box;box-sizing:border-box}body{margin:0;overflow-x:hidden;font:caption;font-size:calc(1rem + .25vw);font-weight:400;line-height:1.5;color:#333;background-color:#eee}.ios body{font-family:"-apple-system",HelveticaNeue,sans-serif}[role=button],a,area,button,input:not([type=range]) label,select,summary,textarea{-ms-touch-action:manipulation;touch-action:manipulation}a{color:#09f;-webkit-text-decoration-skip:ink;text-decoration-skip:ink;background-color:transparent;-webkit-text-decoration-skip:objects;-webkit-transition:color .3s;transition:color .3s}h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.33;color:inherit;margin-bottom:.5rem}@-webkit-keyframes fade-in{100%{opacity:1}}@keyframes fade-in{100%{opacity:1}}.skip{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;-webkit-clip-path:inset(50%);clip-path:inset(50%);border:0}.section{display:grid;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;min-height:100vh;padding:35vw 1.25rem}.section--label{margin:0 0 3.25rem;font-size:2.25rem;font-weight:700}.section--title{margin:5rem 0 1.5rem;font-size:.875rem;color:#333;line-height:1.2;text-transform:uppercase}.section--title:first-child{margin-top:0}.section--title .section--label{letter-spacing:.125rem}.section--intro{color:#eee;background-color:#09f}.section--intro .section--label{display:block;grid-column:2;margin:0 0 1.675rem;font-size:.75rem;font-weight:700;color:#333;text-transform:uppercase}.section--intro .section--title{padding:0 2.5vw;margin:0;font-size:7vw;font-weight:700;color:#eee;line-height:1.1;text-transform:none;-webkit-transition:opacity .9s ease-in-out,-webkit-transform .9s ease-in-out;transition:opacity .9s ease-in-out,transform .9s ease-in-out,-webkit-transform .9s ease-in-out}.section--intro .scroll-link{display:inline-block;color:#eee;text-decoration:none;border-bottom:1px solid #eee}.section--intro .scroll-link--name{margin-bottom:.75rem}@media (min-width:48rem){.section{padding:27.5vw 20vw}}@media (min-width:75rem){.section{grid-template-columns:repeat(2,1fr);grid-template-rows:1fr;padding:20vh 7.5vh}}@media (min-width:90rem){.section{padding:20vh 10vh},.section--intro .section--title{font-size:3.75vw}}.page{opacity:0}</style>
   <script id="loadcss">
   loadCSS("\/main.css", document.getElementById("loadcss"));
   </script>
@@ -106,126 +32,138 @@ section .fill {
   <link rel="preconnect" href="index.html">
 </head>
 <body>
-<h1>FreeCodeCamp</h1>
-<section class="section" ng-app="PomodoroApp" ng-controller="MainCtrl">
-  <header>
-    <div class="session">
-      <div class="breakCtrl">
-        <p>break length</p>
-        <button class="minus" ng-click="breakLengthChange(-1)">-</button><span class="time">{{breakLength}}</span>
-        <button class="plus" ng-click="breakLengthChange(1)">+</button>
-      </div>
-      <div class="sessionCtrl">
-        <p>session length</p>
-        <button class="minus" ng-click="sessionLengthChange(-1)">-</button><span class="time">{{sessionLength}}</span>
-        <button class="plus" ng-click="sessionLengthChange(1)">+</button>
+<div class="pomodoro">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="row"><p>session length<p></div>
+      <div class="row counter">
+        <div class="col-md-4">
+          <button class="btn btn-default" id="sessDec">-</button>        
+        </div>
+        <div class="col-md-2">
+          <div id="session"></div>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-default" id="sessInc">+</button>
+        </div>
       </div>
     </div>
-  </header>
-  <section ng-click="toggleTimer()">
-    <div class="timer">
-      <p class="title">{{sessionName}}</p>
-      <p>{{timeLeft}}</p><span class="fill" ng-style="{'height':fillHeight, 'background':fillColor }"></span>
+    <div class="col-md-6">
+      <div class="row"><p>break length<p></div>
+      <div class="row counter">
+        <div class="col-md-4">
+          <button class="btn btn-default" id="breakDec">-</button>
+        </div>
+        <div class="col-md-2">
+          <div id="break"></div>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-default" id="breakInc">+</button>        
+        </div>
+      </div>
     </div>
-  </section>
-</section>
-<script>var app = angular.module('PomodoroApp', []);
-app.controller('MainCtrl', function($scope, $interval) {
-  $scope.breakLength = 5;
-  $scope.sessionLength = 25;
-  $scope.timeLeft = $scope.sessionLength;
-  $scope.fillHeight = '0%';
-  $scope.sessionName = 'Session';
-  $scope.currentTotal;
-  var runTimer = false;
-  var secs = 60 * $scope.timeLeft;
-  $scope.originalTime = $scope.sessionLength;
-  function secondsToHms(d) {
-    d = Number(d);
-    var h = Math.floor(d / 3600);
-    var m = Math.floor(d % 3600 / 60);
-    var s = Math.floor(d % 3600 % 60);
-    return (
-      (h > 0 ? h + ":" + (m < 10 ? "0" : "") : "") + m + ":" + (s < 10 ? "0" : "") + s
-    ); 
-  }
-  // Change default session length
-  $scope.sessionLengthChange = function(time) {
-    if (!runTimer){
-      if ($scope.sessionName === 'Session') {
-        $scope.sessionLength += time;
-        if ($scope.sessionLength < 1) {
-          $scope.sessionLength = 1;
-        }
-        $scope.timeLeft = $scope.sessionLength;
-        $scope.originalTime = $scope.sessionLength;
-        secs = 60 * $scope.sessionLength;
+  </div>
+  <div id="clock" class="row">
+    <div class="timer"><div class="middle"></div></div>
+  </div>
+  <div class="row" id="statRow">
+    <div id="stats"></div>
+  </div>
+  <div class="container">
+    <div class="row" id="btns">
+      <button class="btn btn-default btn-lg" id="start">start</button>
+      <button class="btn btn-default btn-lg" id="stop">stop</button>
+      <button class="btn btn-default btn-lg" id="clear">clear</button>
+    </div>
+  </div>
+</div>
+<script>$(document).ready(function(){
+  var countS = 25;
+  $("#session").html(countS);
+  var countB = 5;
+  $("#break").html(countB);
+  var pos = "pomodoro";
+  var countLama;
+  var posLama;
+  var count;
+  $("#stats").html(pos);
+  var clock = $(".timer").FlipClock(0, {
+    countdown: true,
+    clockFace: 'MinuteCounter',
+    autoStart: false,
+    callbacks: {
+      interval: function(){
+        if (clock.getTime() == 0){
+          if (pos == "session"){
+            clock.setTime(countB*60);
+            clock.start();
+            pos = "break";
+            $("#stats").html(pos);
+          } else if (pos == "break"){
+            clock.setTime(countS*60);
+            clock.start();
+            pos = "session";
+            $("#stats").html(pos);
+          }
+        }        
       }
     }
-  }
-  // Change default break length
-  $scope.breakLengthChange = function(time) {
-    if (!runTimer){
-      $scope.breakLength += time;
-      if ($scope.breakLength < 1) {
-        $scope.breakLength = 1;
-      }
-      if ($scope.sessionName === 'Break!') {
-        $scope.timeLeft = $scope.breakLength;
-        $scope.originalTime = $scope.breakLength;
-        secs = 60 * $scope.breakLength;
-      }
+  })  
+  //SESSION
+  $("#sessInc").on("click", function(){
+    if ($("#session").html() > 0){
+      countS = parseInt($("#session").html());
+      countS+=1;
+      $("#session").html(countS);
+      //clock.setTime(countS*60);
     }
-  }
-  $scope.toggleTimer = function() {
-    if (!runTimer) {
-      if ($scope.currentName === 'Sesson') {
-        $scope.currentLength = $scope.sessionLength;
-      } else {
-        $scope.currentLength = $scope.breakLength;
-      }
-      updateTimer();
-      runTimer = $interval(updateTimer, 1000);
+  });
+  $("#sessDec").on("click", function(){
+    if ($("#session").html() > 1){
+      countS = parseInt($("#session").html());
+      countS-=1;
+      $("#session").html(countS);
+      //clock.setTime(countS*60);
+    }
+  });
+  //BREAK
+  $("#breakInc").on("click", function(){
+    if ($("#break").html() > 0){
+      countB = parseInt($("#break").html());
+      countB+=1;
+      $("#break").html(countB);
+    }    
+  });
+  $("#breakDec").on("click", function(){
+    if ($("#break").html() > 1){
+      countB = parseInt($("#break").html());
+      countB-=1;
+      $("#break").html(countB);
+    }
+  });  
+  $("#start").on("click", function(){
+    if (count != countS || clock.getTime()==0){
+      clock.setTime(countS*60);
+      pos="session";
+      $("#stats").html(pos);
     } else {
-      $interval.cancel(runTimer);
-      runTimer = false;
+      pos = posLama;
+      $("#stats").html(pos);
     }
-  }
-  function updateTimer() {
-    secs -= 1;
-    if (secs < 0) {
-      // countdown is finished
-      // Play audio
-      var wav = 'http://www.oringz.com/oringz-uploads/sounds-917-communication-channel.mp3';
-      var audio = new Audio(wav);
-			audio.play();
-      // toggle break and session
-      $scope.fillColor = '#333333';
-      if ($scope.sessionName === 'Break!') {
-        $scope.sessionName = 'Session';
-        $scope.currentLength = $scope.sessionLength;
-        $scope.timeLeft = 60 * $scope.sessionLength;
-        $scope.originalTime = $scope.sessionLength;
-        secs = 60 * $scope.sessionLength;
-      } else {
-        $scope.sessionName = 'Break!';
-        $scope.currentLength = $scope.breakLength;
-        $scope.timeLeft = 60 * $scope.breakLength;
-        $scope.originalTime = $scope.breakLength;
-        secs = 60 * $scope.breakLength;
-      }
-    } else {
-      if ($scope.sessionName === 'Break!') {
-        $scope.fillColor = '#FF4444';
-      } else {
-        $scope.fillColor = '#99CC00';
-      }
-	    $scope.timeLeft = secondsToHms(secs);
-      var denom = 60 * $scope.originalTime;
-      var perc = Math.abs((secs / denom) * 100 - 100);
-      $scope.fillHeight = perc + '%';
-    }
-  }
+    count = countS;    
+    clock.start();    
+  });
+  $("#stop").on("click", function(){
+    clock.stop();
+    countLama = clock.getTime();
+    posLama = $("#stats").html();
+  });
+  $("#clear").on("click", function(){
+    clock.stop();
+    pos = "pomodoro";
+    $("#stats").html(pos);
+    clock.setTime(0);
+  });
 });</script>
   <script defer src='https://zphyr00.github.io/main.bundle.js'></script>
 </body>
