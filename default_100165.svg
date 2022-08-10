@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="12px" height="19px" viewBox="0 0 12 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>default</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="bundle-os-x-cursors" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="default" transform="translate(-22.000000, -19.000000)">
+            <g transform="translate(22.000000, 19.000000)" id="cursor">
+                <path d="M0,16.015 L0,0 L11.591,11.619 L4.81,11.619 L4.399,11.743 L0,16.015 Z" fill="#FFFFFF"></path>
+                <path d="M9.0845,16.6893 L5.4795,18.2243 L0.7975,7.1353 L4.4835,5.5823 L9.0845,16.6893 Z" fill="#FFFFFF"></path>
+                <path d="M7.751,16.0086 L5.907,16.7826 L2.807,9.4086 L4.648,8.6336 L7.751,16.0086 Z" fill="#000000"></path>
+                <path d="M1,2.4071 L1,13.5951 L3.969,10.7291 L4.397,10.5901 L9.165,10.5901 L1,2.4071 Z" fill="#000000"></path>
+            </g>
+        </g>
+    </g>
+</svg>
