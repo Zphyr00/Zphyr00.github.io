@@ -1,2 +1,4 @@
-User-Agent: *
-Allow: /
+User-agent: *
+Disallow: 
+Host: zphyr00.github.io
+Sitemap: https://zphyr00.github.io/sitemap.xml
