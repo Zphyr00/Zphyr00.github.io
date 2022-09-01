@@ -27,6 +27,7 @@
   <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#09f">
   <meta name="msapplication-TileColor" content="#09f">
   <meta name="theme-color" content="#09f">
+  <style>#preloader{position:fixed;width:100%;height:100%;background:#09f;display:flex;justify-content:center;align-items:center}</style>
   <style>*{scrollbar-width:thin;scrollbar-color:#09f #eee}::-webkit-scrollbar{width:12px}::-webkit-scrollbar-track{background:#eee}::-webkit-scrollbar-thumb{background-color:#09f}body,html{-webkit-font-smoothing:antialiased}html{text-rendering:optimizeLegibility}body{padding:86px 0;overflow-x:hidden;font:caption;color:#333;background-color:#eee}.ios body{font-family:"-apple-system",HelveticaNeue,sans-serif}#contacts{text-align:center}.switch{position:relative;display:inline-block;width:60px;height:34px}.switch input{opacity:0;width:0;height:0}.slider{position:absolute;top:0;left:0;right:0;bottom:0;background-color:#333;-webkit-transition:.4s;transition:.4s}.slider:before{position:absolute;content:"";height:26px;width:26px;left:4px;bottom:4px;background-color:#eee;-webkit-transition:.4s;transition:.4s}input:checked+.slider{background-color:#eee!important}input:checked+.slider:before{background-color:#333;-webkit-transform:translateX(26px);-ms-transform:translateX(26px);transform:translateX(26px)}#fixed{position:fixed;right:26px;top:26px}</style>
   <link rel="stylesheet" href="/main.css" media="print" onload="this.media='all'">
   <noscript>
@@ -37,6 +38,7 @@
   <link rel="preconnect" href="index.html">
 </head>
 <body class="z-body">
+  <div id="preloader"><p>Загрузка...</p></div>
   <div id="allrecords" class="z-records">
     <div class="r z-rec t-rec_pt_60 z-rec_pb_30">
       <div class="z004">
@@ -140,5 +142,9 @@
   </div>
   <div id="fixed"><label class="switch"><input type="checkbox" id="toggledark" onchange="toggledark()"><span class="slider"></span></label></div>
   <script defer src="/main.js"></script>
+  <script>window.onload=function(){document.getElementById("preloader").style.display="none"}</script>
+  <noscript>
+    <style>#preloader{display:none}</style>
+  </noscript>
 </body>
 </html>
