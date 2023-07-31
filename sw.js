@@ -1,1 +1,33 @@
-const CACHE_NAME="zphyr-v1.0",cacheList=["index.html","main.js"];this.addEventListener("install",function(t){t.waitUntil(caches.open(CACHE_NAME).then(t=>t.addAll(cacheList)))});const CACHE_PREFIX="zphyr";this.addEventListener("activate",function(t){t.waitUntil(caches.keys().then(t=>Promise.all(t.map(t=>{if(0===t.indexOf("zphyr")&&t!==CACHE_NAME)return caches.delete(t)}))))}),this.addEventListener("fetch",function(t){0!==t.request.url.indexOf("http://")&&t.respondWith(caches.match(t.request,{ignoreSearch:!0}).then(function(e){return e||fetch(t.request)}))});navigator.serviceWorker.addEventListener("controllerchange",()=>window.location.reload())
+'use strict';
+const CACHE_STATIC = 'zphyr-v1';
+function hndlEventInstall(evt) {
+    async function cacheStaticFiles() {
+        const files = [
+            './'
+        ];
+        const cacheStat = await caches.open(CACHE_STATIC);
+        await Promise.all(
+            files.map(function (url) {
+                return cacheStat.add(url).catch(function (reason) {
+                    console.log(`'${url}' failed: ${String(reason)}`);
+                });
+            })
+        );
+    }
+    evt.waitUntil(cacheStaticFiles());
+}
+function hndlEventFetch(evt) {
+    async function getFromCache() {
+        const cache = await self.caches.open(CACHE_STATIC);
+        const cachedResponse = await cache.match(evt.request);
+        if (cachedResponse) {
+            return cachedResponse;
+        }
+        const resp = await fetch(evt.request);
+        await cache.put(evt.request, resp.clone());
+        return resp;
+    }
+    evt.respondWith(getFromCache());
+}
+self.addEventListener('install', hndlEventInstall);
+self.addEventListener('fetch', hndlEventFetch);
