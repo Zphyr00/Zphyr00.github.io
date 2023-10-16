@@ -20,8 +20,8 @@
             "purpose": "maskable"
         }
     ],
-    "theme_color": "#09f",
-    "background_color": "#09f",
+    "theme_color": "#66f",
+    "background_color": "#66f",
     "start_url": "https://zphyr00.github.io",
     "display": "standalone"
 }
