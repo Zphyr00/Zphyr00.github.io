@@ -2,17 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zphyr00.github.io/</loc>
-    <lastmod>2024-01-28T15:23:42+00:00</lastmod>
+    <lastmod>2024-03-29T15:23:42+00:00</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://zphyr00.github.io/comfyui</loc>
-    <lastmod>2024-01-28T15:23:42+00:00</lastmod>
+    <lastmod>2024-03-29T15:23:42+00:00</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://zphyr00.github.io/python</loc>
+    <lastmod>2024-03-29T15:23:42+00:00</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://zphyr00.github.io/affiliates</loc>
-    <lastmod>2024-01-28T15:23:42+00:00</lastmod>
+    <lastmod>2024-03-29T15:23:42+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 </urlset>
