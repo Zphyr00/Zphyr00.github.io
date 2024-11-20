@@ -1,0 +1,100 @@
+<!--⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠟⠛⠛⠛⠛⠿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣿⠟⢋⣡⣤⣶⣶⣶⣿⣷⣶⣶⣦⣤⣈⡙⠿⣿⣿⣿⣿⣿⣿⣿
+    ⣿⣿⣿⣿⡿⠋⣠⡾⠛⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠻⢶⣌⠻⣿⣿⣿⣿⣿
+    ⣿⣿⣿⠟⣠⡾⠋⠀⠀⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⠋⠀⠀⠀⠙⣷⡌⢻⣿⣿⣿
+    ⣿⣿⠏⣰⡟⠀⠀⠀⠀⠀⠀⢻⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠈⢿⡄⢻⣿⣿
+    ⣿⡏⢠⣿⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠈⣷⠀⢿⣿
+    ⣿⠁⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⣠⠿⠛⠻⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡇⢸⣿
+    ⣿⠀⣿⣧⣤⣤⣤⣤⣤⣤⣤⣼⡇⠀⠀⠀⠈⣿⣤⣤⣤⣤⣤⣤⣤⣤⣼⡇⢸⣿
+    ⣿⡄⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣄⣀⣀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⢸⣿
+    ⣿⣇⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠉⠉⠉⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠀⣾⣿
+    ⣿⣿⣆⠸⣿⣿⣿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠈⢿⣿⣿⣿⣿⣿⣿⣿⠃⣼⣿⣿
+    ⣿⣿⣿⣧⡘⢿⣿⣿⣿⣿⠏⠀⠀⠀⠀⠀⠀⠀⠈⢿⣿⣿⣿⣿⠟⢁⣾⣿⣿⣿
+    ⣿⣿⣿⣿⣷⣄⡙⠿⣿⣇⡀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣿⣿⠟⢁⣴⣿⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣿⣶⣤⣉⠙⠛⠿⠶⠶⠶⠾⠟⠛⠋⣉⣤⣾⣿⣿⣿⣿⣿⣿⣿
+    ⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣶⣶⣶⣶⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿-->
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self';style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;img-src 'self' data:;font-src 'self' https://fonts.gstatic.com">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <title>Кандидат на вакансию: готов к новым возможностям и вызовам</title>
+  <meta name="description" content="Готов к возможностям и вызовам. Открыт к идеям и готов учиться. Цель — найти подходящую роль и развивать свои навыки.">
+  <meta name="keywords" content="Z_phyr, работа, карьера, сотрудник, бизнес, вакансия, трудоустройство, профессиональный рост">
+  <meta name="author" content="Z_phyr">
+  <link rel="license" href="/LICENSE">
+  <link rel="me" href="https://t.me/Zphyr00" type="text/html">
+  <link rel="me" href="https://wa.me/79965439267" type="text/html">
+  <link rel="me" href="mailto:zphyr@disroot.org">
+  <link rel="me" href="xmpp:zphyr@xmpp.jp">
+  <meta property="og:url" content="https://zphyr00.github.io/python">
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Кандидат на вакансию: готов к новым возможностям и вызовам" />
+  <meta property="og:description" content="Готов к возможностям и вызовам. Открыт к идеям и готов учиться. Цель — найти подходящую роль и развивать свои навыки." />
+  <meta property="og:image" content="/cover.jpeg" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#245ddb">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#245ddb">
+  <style>*,:before,:after{box-sizing:border-box}*{scrollbar-width:thin;scrollbar-color:#245ddb #eeecdc}::-webkit-scrollbar{width:12px}::-webkit-scrollbar-track{background:#eeecdc}::-webkit-scrollbar-thumb{background-color:#245ddb}html{text-rendering:optimizeLegibility;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}body{overflow-x:hidden;font:caption;font-size:20px;background:url(/background.jpg) repeat;color:#373738;margin:0;padding:0}.ios body{font-family:"-apple-system",HelveticaNeue,sans-serif}a,html{cursor:url("data:image/svg+xml,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 20 29' width='20px' height='29px'><g id='surface45869468'><path style='stroke:rgb(255,253,25);stroke-width:2;fill-rule:nonzero;fill:rgb(255,27,25);fill-opacity:1' d='M 0 0 L 20 14 L 19 29 L 4 24 L 0 0'/></g></svg>"),auto}::selection{background-color:#245ddb;color:#eeecdc}</style>
+  <meta name="robots" content="index,follow">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="canonical" href="https://zphyr00.github.io/python">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+  <meta name="google-site-verification" content="w3v4y1M1UlcwtnZYMFmXoI7dDuh2Hs6mvScMZuhDgDM" />
+</head>
+<body>
+  <div class="main">
+    <section itemscope="" itemtype="https://schema.org/Person">
+      <h1><a href="index.html">Привет, я — <span itemprop="name">Z_phyr</span></a> <img src="/smile.gif"></h1>
+    </section>
+    <section itemscope="" itemtype="http://schema.org/Article">
+      <h2 itemprop="headline">Кандидат на вакансию: готов к новым возможностям и вызовам</h2>
+    <article itemprop="articleBody">
+      <p></p>
+    </article>
+    </section>
+    <img src="/mailput.gif">
+    <section id="contacts" itemscope="" itemtype="https://schema.org/Person">
+      <a href="mailto:zphyr@disroot.org" title="zphyr@disroot.org" itemprop="email">[Почта]</a> <a href="https://t.me/Zphyr00" title="Telegram" itemprop="url">[Телеграм]</a> <a href="https://wa.me/79965439267" title="WhatsApp" itemprop="url">[WhatsApp]</a> <a href="xmpp:zphyr@xmpp.jp" title="XMPP" itemprop="url">[XMPP]</a> <a href="https://www.linkedin.com/in/zphyr/" title="LinkedIn" itemprop="url">[LinkedIn]</a> <a href="https://civitai.com/user/Z_phyr" title="Civitai" itemprop="url">[Civitai]</a> <a href="https://vk.com/neuroulyana" title="Нейроульяна" itemprop="url">[Нейроульяна]</a> <a href="https://tattoonhamon.ru/" title="Татунхамон" itemprop="url">[Татунхамон]</a>
+    </section>
+    <section id="affiliates">
+      <img src="/0038-exitbutton2.gif">
+      <img src="/0015-exit-button.gif">
+      <img src="/0081-asexual.gif">
+      <img src="/0110-yeah.gif">
+      <img src="/0032-coffeecup.gif">
+      <img src="/cookiefree.gif">
+      <img src="/anybrowser.gif">
+      <img src="/edc2822a2f5ecb1c.png">
+      <img src="/bestview.gif">
+      <img src="/e14.gif">
+      <img src="/f12.gif">
+    </section>
+    <footer itemscope="" itemtype="http://schema.org/WebPage">
+      <p>Не забудьте сделать закладку на сайт (CTRL+D)</p>
+      <p itemprop="copyrightHolder">Код и контент мои © 2021-всегда</p>
+    </footer>
+    <script src="/main.js"></script>
+  </div>
+</body>
+</html>
