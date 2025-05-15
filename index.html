@@ -19,11 +19,11 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self';style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;img-src 'self' data:;font-src 'self' https://fonts.gstatic.com">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self';style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;img-src 'self' data:;font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com">
   <meta name="referrer" content="no-referrer-when-downgrade">
-  <title>Z_phyr — услуги разработки алгоритмов машинного обучения</title>
-  <meta name="description" content="Я, Z_phyr, предлагаю услуги по разработке алгоритмов машинного обучения с использованием Python">
-  <meta name="keywords" content="генеративная модель, Stable Diffusion, глубокое обучение, машинное обучение, Python, алгоритмы машинного обучения, генерация изображений">
+  <title>Z_phyr — услуги генерации контента и автоматизации</title>
+  <meta name="description" content="Я, Z_phyr, предлагаю услуги по генерации визуального контента и автоматизации с использованием Python">
+  <meta name="keywords" content="генеративная модель, генерация видео, сбор датасета, подготовка данных, Python, автоматизация, генерация изображений">
   <meta name="author" content="Z_phyr">
   <link rel="license" href="/LICENSE">
   <link rel="me" href="https://t.me/Zphyr00" type="text/html">
@@ -32,8 +32,8 @@
   <link rel="me" href="xmpp:zphyr@xmpp.jp">
   <meta property="og:url" content="https://zphyr00.github.io/">
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Z_phyr — услуги разработки алгоритмов машинного обучения" />
-  <meta property="og:description" content="Я, Z_phyr, предлагаю услуги по разработке алгоритмов машинного обучения с использованием Python" />
+  <meta property="og:title" content="Z_phyr — услуги генерации контента и автоматизации" />
+  <meta property="og:description" content="Я, Z_phyr, предлагаю услуги по генерации визуального контента и автоматизации с использованием Python" />
   <meta property="og:image" content="/cover.jpeg" />
   <meta name="mobile-web-app-capable" content="yes">
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
@@ -53,7 +53,7 @@
   <meta name="msapplication-TileColor" content="#245ddb">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#245ddb">
-  <style>*,:before,:after{box-sizing:border-box}*{scrollbar-width:thin;scrollbar-color:#245ddb #eeecdc}::-webkit-scrollbar{width:12px}::-webkit-scrollbar-track{background:#eeecdc}::-webkit-scrollbar-thumb{background-color:#245ddb}html{text-rendering:optimizeLegibility;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}body{overflow-x:hidden;font-family:"Comic Sans MS","Comic Sans",cursive;font-size:20px;background:url(/background.jpg) repeat;color:#373738;margin:0;padding:0}a,html{cursor:url("data:image/svg+xml,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 20 29' width='20px' height='29px'><g id='surface45869468'><path style='stroke:rgb(255,253,25);stroke-width:2;fill-rule:nonzero;fill:rgb(255,27,25);fill-opacity:1' d='M 0 0 L 20 14 L 19 29 L 4 24 L 0 0'/></g></svg>"),auto}::selection{background-color:#245ddb;color:#eeecdc}.subdesc{text-align:center}</style>
+  <style>*,:before,:after{box-sizing:border-box}*{scrollbar-width:thin;scrollbar-color:#245ddb #eeecdc}::-webkit-scrollbar{width:12px}::-webkit-scrollbar-track{background:#eeecdc}::-webkit-scrollbar-thumb{background-color:#245ddb}html{text-rendering:optimizeLegibility;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}body{overflow-x:hidden;font-family:"Comic Sans MS","Comic Sans",cursive;font-size:20px;background:url(/background.jpg) repeat;color:#373738;margin:0;padding:0}a,html{cursor:url("data:image/svg+xml,<?xml version='1.0' encoding='UTF-8'?><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 20 29' width='20px' height='29px'><g id='surface45869468'><path style='stroke:rgb(255,253,25);stroke-width:2;fill-rule:nonzero;fill:rgb(255,27,25);fill-opacity:1' d='M 0 0 L 20 14 L 19 29 L 4 24 L 0 0'/></g></svg>"),auto}::selection{background-color:#245ddb;color:#eeecdc}.subdesc{text-align:center}.preview{max-width:480px}</style>
   <meta name="robots" content="index,follow">
   <link rel="stylesheet" href="/style.css">
   <link rel="canonical" href="https://zphyr00.github.io/">
@@ -75,9 +75,9 @@
       <h3 itemprop="configuration" class="subsection">Виды деятельности</h3>
       <article itemprop="description" class="subdesc">
       <p>Генерация изображений</p>
-      <img width="100%" style="max-width:480px" src="/image_preview.jpg" loading="lazy">
+      <img width="100%" class="preview" src="/image_preview.jpg" loading="lazy">
       <p>Генерация видео</p>
-      <video width="100%" style="max-width:480px" autoplay="" loop="" mute="" playsinline="" poster="/video_preview.jpg">
+      <video width="100%" class="preview" autoplay="" loop="" mute="" playsinline="" poster="/video_preview.jpg">
         <source src="/video_preview.mp4" type="video/mp4">
         <source src="/video_preview.webm" type="video/webm">
       </video>
