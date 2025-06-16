@@ -31,3 +31,16 @@ function hndlEventFetch(evt) {
 }
 self.addEventListener('install', hndlEventInstall);
 self.addEventListener('fetch', hndlEventFetch);
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    caches.keys().then(function(names) {
+      return Promise.all(
+        names.filter(function(cacheName) {
+          return cacheName!= 'zphyr-v8.4';
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
+        })
+      );
+    })
+  );
+});
