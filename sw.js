@@ -1,5 +1,5 @@
 'use strict';
-const CACHE_STATIC = 'zphyr-v9.3';
+const CACHE_STATIC = 'zphyr-v9.4';
 function hndlEventInstall(evt) {
     async function cacheStaticFiles() {
         const files = [
